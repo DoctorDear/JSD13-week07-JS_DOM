@@ -12,7 +12,7 @@ const keyDisplay = document.querySelector("#key-display");
 // your listener function receives).
 box.addEventListener("click", (event) => {
   log.textContent = "Box clicked!";
-  console.log(event)
+  // console.log(event)
   console.log(event.type, event.target);
 });
 
@@ -29,6 +29,6 @@ box.addEventListener("mouseout", () => {
 // TODO 4: Add a "keydown" listener on the whole document. Inside it, set
 // key-display's textContent to event.key (the key that was pressed).
 document.addEventListener("keydown", (event) => {
-  console.log(event);
+  // console.log(event);
   keyDisplay.textContent = event.key;
 });
