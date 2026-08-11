@@ -1,0 +1,6 @@
+.idea
+.vscode
+.prettierrc
+node_modules
+dist
+build
