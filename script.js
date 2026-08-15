@@ -58,6 +58,7 @@ clickMe.addEventListener("click", () => {
 clickMe.addEventListener("click", (e) => {
   eventDiv.innerHTML = `<img width="200px" height="200px" src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`;
 });
+
 document.addEventListener("keydown", (e) => {
   console.log(e.key);
 });

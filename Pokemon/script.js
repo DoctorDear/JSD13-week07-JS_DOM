@@ -1,8 +1,8 @@
 const progressX = document.getElementById("progressX");
 const btnPokemon = document.getElementById("btn-pokemon");
 const nameInput = document.getElementById("name-input");
-const search = document.getElementById("search");
-const resetBtn = document.getElementById("reset");
+const search = document.getElementById("search-btn");
+const resetBtn = document.getElementById("reset-btn");
 
 btnPokemon.addEventListener("click", async () => {
     const randomId = Math.floor(Math.random() * 1118) + 1;
@@ -13,7 +13,6 @@ btnPokemon.addEventListener("click", async () => {
     const data = await response.json();
     console.log(data);
 
-    //   progressX.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name}"><h2>${data.name}</h2>`;
     renderPokemonCard(data);
 });
 

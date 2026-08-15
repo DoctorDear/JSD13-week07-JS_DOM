@@ -44,7 +44,6 @@
         text-transform: capitalize;
         color: #333;
         font-size: 20px;
-
     }
 
     #btn-pokemon {
@@ -68,16 +67,62 @@
     #btn-pokemon:active {
         transform: translateY(0);
     }
+
+    form {
+        margin-top: 20px;
+    }
+
+    #name-input {
+        caret-color: #ff5350;
+        border-radius: 5px;
+        color: rgb(40, 40, 40);
+        border: none;
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(255, 83, 80, 0.3);
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    #search-btn {
+        background-color: #616161;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(95, 95, 95, 0.3);
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    #reset-btn {
+        background-color: #616161;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(95, 95, 95, 0.3);
+        transition: transform 0.2s, background-color 0.2s;
+    }
 </style>
 
 <body>
     <H1>Pokemon Search</H1>
     <div id="progressX"></div>
     <button id="btn-pokemon">Random new pokemon</button>
-    <form id="search" class="search">
+    <form id="search" class="search-bar">
         <input type="text" id="name-input" placeholder="Pokemon name" autocomplete="off">
-        <button id="search" type="submit">Search</button>
-        <button id="reset" type="button">Reset</button>
+        <button id="search-btn" type="submit">Search</button>
+        <button id="reset-btn" type="button">Reset</button>
     </form>
 
     <script src="script.js"></script>
