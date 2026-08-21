@@ -20,7 +20,7 @@
 </head>
 
 
-<body>
+<body class="bg-zinc-950 min-h-screen text-white">
     <header class="bg-zinc-950 px-6 py-4 flex justify-between">
 
         <!-- logo and name in left side -->
@@ -45,13 +45,176 @@
     </header>
 
     <main class="grid grid-cols-1 md:grid-cols-2">
-        <section class="bg-zinc-950">
+        <!-- TERMINID PURGE -->
+        <section class="bg-zinc-950 border border-zinc-800 p-4 flex flex-col items-center">
             <div class="text-yellow-400">
                 TERMINID PURGE STATUS
             </div>
+            <div class="my-6">
+                <h1 id="bugs-score" class="text-5xl md:text-6xl font-black text-yellow-400 tracking-tighter">
+                    0
+                </h1>
+                <span class="text-2xl font-black text-yellow-400 tracking-widest block mt-1">
+                    BUGS
+                </span>
+
+                <!-- kill rate and firepower -->
+                <div class="mt-4 gap-1 text-l font-bold inline-block">
+                    <p class="text-zinc-400 bg-zinc-800 px-3 py-1 border inline-block">Kill Rate: <span id="kill-rate"
+                            class="text-yellow-400">
+                            0
+                        </span> Bugs / sec</p>
+                    <p class="text-red-300 mt-1">
+                        Firepower: <span id="firepower" class="text-red-300">1</span> Bugs / Click
+                    </p>
+                </div>
+            </div>
+            <!-- click button  -->
+            <button id="click-btn"
+                class="w-44 h-44 bg-[#fef08a] rounded-full border-4 border-yellow-300 active:scale-95 transition cursor-pointer flex items-center justify-center">
+                <span class="text-6xl select-none">🐛</span>
+            </button>
         </section>
-        <section>
-            <div>DEPLOY STRATAGEMS</div>
+        <section class="bg-zinc-950 border border-zinc-800 p-4 flex flex-col gap-3">
+            <div
+                class="flex justify-between items-center border-b border-zinc-700 pb-3 text-l font-bold tracking-wide text-zinc-300">
+                <div>DEPLOY STRATAGEMS</div>
+                <span class="text-zinc-500">SEC: ALPHA</span>
+            </div>
+            <!-- Card 1 -->
+            <div
+                class="flex justify-between items-center border-b border-zinc-800 pb-3 text-xs font-bold tracking-widest text-zinc-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-zinc-950 border border-zinc-800 rounded flex items-center justify-center">
+                        👤
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="font-bold text-sm text-zinc-200">SEAF TROOPER</h3>
+                        <p class="text-xs text-zinc-400">+1 Click Power</p>
+                    </div>
+                </div>
+
+                <!-- Item 1: SEAF TROOPER -->
+                <div class="flex items-center gap-4">
+                    <button id="buy-trooper-btn" class="text-right cursor-pointer">
+                        <span class="text-[10px] text-zinc-500 block">COST</span>
+                        <span class="text-sm font-black text-red-400">
+                            <span id="trooper-cost">
+                                15
+                            </span> Bugs
+                        </span>
+                    </button>
+                    <div class="bg-zinc-950 border border-zinc-800 px-3 py-1 rounded text-center min-w-[50px]">
+                        <span class="text-[9px] text-zinc-500 block">
+                            DEPLOYED
+                        </span>
+                        <span id="trooper-deployed" class="text-xs font-black text-yellow-400">
+                            0
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="flex justify-between items-center border-b border-zinc-800 pb-3 text-xs font-bold tracking-widest text-zinc-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-zinc-950 border border-zinc-800 rounded flex items-center justify-center">
+                        👤
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="font-bold text-sm text-zinc-200">UAV RECON DRONE</h3>
+                        <p class="text-xs text-zinc-400">+2 Auto / sec</p>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center gap-4">
+                    <button id="buy-drone-btn" class="text-right cursor-pointer">
+                        <span class="text-[10px] text-zinc-500 block">COST</span>
+                        <span class="text-sm font-black text-red-400">
+                            <span id="drone-cost">
+                                100
+                            </span> Bugs
+                        </span>
+                    </button>
+                    <div class="bg-zinc-950 border border-zinc-800 px-3 py-1 rounded text-center min-w-[50px]">
+                        <span class="text-[9px] text-zinc-500 block">
+                            DEPLOYED
+                        </span>
+                        <span id="drone-deployed" class="text-xs font-black text-yellow-400">
+                            0
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="flex justify-between items-center border-b border-zinc-800 pb-3 text-xs font-bold tracking-widest text-zinc-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-zinc-950 border border-zinc-800 rounded flex items-center justify-center">
+                        👤
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="font-bold text-sm text-zinc-200">EAGLE 110MM ROCKETS</h3>
+                        <p class="text-xs text-zinc-400">+5 Auto / sec</p>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center gap-4">
+                    <button id="buy-eagle-btn" class="text-right cursor-pointer">
+                        <span class="text-[10px] text-zinc-500 block">COST</span>
+                        <span class="text-sm font-black text-red-400">
+                            <span id="eagle-cost">
+                                500
+                            </span> Bugs
+                        </span>
+                    </button>
+                    <div class="bg-zinc-950 border border-zinc-800 px-3 py-1 rounded text-center min-w-[50px]">
+                        <span class="text-[9px] text-zinc-500 block">
+                            DEPLOYED
+                        </span>
+                        <span id="eagle-deployed" class="text-xs font-black text-yellow-400">
+                            0
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div
+                class="flex justify-between items-center border-b border-zinc-800 pb-3 text-xs font-bold tracking-widest text-zinc-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-zinc-950 border border-zinc-800 rounded flex items-center justify-center">
+                        👤
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="font-bold text-sm text-zinc-200">PATRIOT EXOSUIT</h3>
+                        <p class="text-xs text-zinc-400">+20 Auto / sec</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button id="buy-mech" class="text-right cursor-pointer">
+                        <span class="text-[10px] text-zinc-500 block">COST</span>
+                        <span class="text-sm font-black text-red-400">
+                            <span id="mech-cost">
+                                2,000
+                            </span> Bugs
+                        </span>
+                    </button>
+                    <div class="bg-zinc-950 border border-zinc-800 px-3 py-1 rounded text-center min-w-[50px]">
+                        <span class="text-[9px] text-zinc-500 block">
+                            DEPLOYED
+                        </span>
+                        <span id="mech-deployed" class="text-xs font-black text-yellow-400">
+                            0
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     </main>
 
